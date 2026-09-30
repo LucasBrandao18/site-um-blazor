@@ -1,0 +1,21 @@
+@page "/contador"
+
+<PageTitle>Contador | SiteUmBlazor</PageTitle>
+
+<p class="eyebrow">EXERCÍCIO 02 · CONTADOR</p>
+<section class="panel interaction-panel">
+    <h1 aria-live="polite">Número de cliques: @quantidade</h1>
+    <p class="lead">Cada clique adiciona uma unidade à contagem.</p>
+    <button type="button" class="button" @onclick="Incrementar" disabled="@(!RendererInfo.IsInteractive)">
+        Clique Aqui
+    </button>
+</section>
+
+@code {
+    private int quantidade = 0;
+
+    private void Incrementar()
+    {
+        quantidade++;
+    }
+}

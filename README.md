@@ -1,6 +1,3 @@
-# site-um-blazor
-homework
-
 # SiteUmBlazor
 
 Projeto em **C# / Blazor Web App / .NET 10**, desenvolvido para a lista
@@ -254,4 +251,3 @@ incluindo subtrair quando a pontuação já é zero.
 
 - Enunciado: `13.lista_net_blazor.pdf`, fornecido pelo professor.
 - [Modos de renderização do Blazor (.NET 10)](https://learn.microsoft.com/aspnet/core/blazor/components/render-modes?view=aspnetcore-10.0).
-

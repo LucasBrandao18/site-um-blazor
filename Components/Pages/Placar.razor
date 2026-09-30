@@ -1,0 +1,39 @@
+@page "/placar"
+
+<PageTitle>Placar | SiteUmBlazor</PageTitle>
+
+<p class="eyebrow">EXERCÍCIO 04 · PLACAR</p>
+<section class="panel interaction-panel">
+    <h1>Placar interativo</h1>
+    <p class="lead">Some, subtraia ou comece de novo.</p>
+    <div class="score" role="status" aria-live="polite" aria-atomic="true">
+        <span class="score-label">Pontos</span>
+        <span class="score-value">@pontos</span>
+    </div>
+    <div class="button-group">
+        <button type="button" class="button" @onclick="SomarPonto" disabled="@(!RendererInfo.IsInteractive)">Somar 1 Ponto</button>
+        <button type="button" class="button button-secondary" @onclick="SubtrairPonto" disabled="@(!RendererInfo.IsInteractive)">Subtrair 1 Ponto</button>
+        <button type="button" class="button button-quiet" @onclick="ZerarPlacar" disabled="@(!RendererInfo.IsInteractive)">Zerar Placar</button>
+    </div>
+    <p class="hint">A pontuação nunca fica abaixo de zero.</p>
+</section>
+
+@code {
+    private int pontos = 0;
+
+    private void SomarPonto()
+    {
+        pontos++;
+    }
+
+    private void SubtrairPonto()
+    {
+        // Mesmo ao clicar em zero, o estado continua válido.
+        pontos = Math.Max(0, pontos - 1);
+    }
+
+    private void ZerarPlacar()
+    {
+        pontos = 0;
+    }
+}

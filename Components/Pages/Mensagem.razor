@@ -1,0 +1,29 @@
+@page "/mensagem"
+
+<PageTitle>Mensagem | SiteUmBlazor</PageTitle>
+
+<p class="eyebrow">EXERCÍCIO 03 · MENSAGEM</p>
+<section class="panel interaction-panel">
+    <h1>Alternador de mensagem</h1>
+    <p class="lead">Uma mensagem de boas-vindas, quando você quiser.</p>
+    <button type="button" class="button" @onclick="AlternarVisibilidade"
+            aria-expanded="@exibirMensagem.ToString().ToLowerInvariant()"
+            aria-controls="area-mensagem" disabled="@(!RendererInfo.IsInteractive)">
+        @(exibirMensagem ? "Ocultar Mensagem" : "Exibir Mensagem")
+    </button>
+    <div id="area-mensagem" aria-live="polite">
+        @if (exibirMensagem)
+        {
+            <p class="welcome-message">Sejam Bem-vindo(a)s!</p>
+        }
+    </div>
+</section>
+
+@code {
+    private bool exibirMensagem = false;
+
+    private void AlternarVisibilidade()
+    {
+        exibirMensagem = !exibirMensagem;
+    }
+}

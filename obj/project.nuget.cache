@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uvp1DhtmUvU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lucas\\OneDrive\\Documentos\\vs code uni\\homework-listablazor\\SiteUmBlazor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.11\\microsoft.aspnetcore.app.internal.assets.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

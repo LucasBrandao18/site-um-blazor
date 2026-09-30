@@ -1,0 +1,34 @@
+﻿@inherits LayoutComponentBase
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="/" aria-label="SiteUmBlazor, início">
+            <span class="brand-mark" aria-hidden="true">B</span>
+            <span>SiteUmBlazor</span>
+        </a>
+        <nav aria-label="Navegação principal">
+            <NavLink href="/" Match="NavLinkMatch.All">Início</NavLink>
+            <NavLink href="/sobre">Sobre mim</NavLink>
+            <NavLink href="/contador">Contador</NavLink>
+            <NavLink href="/mensagem">Mensagem</NavLink>
+            <NavLink href="/placar">Placar</NavLink>
+        </nav>
+    </div>
+</header>
+
+<main id="conteudo" class="page-container">
+    @Body
+</main>
+
+<footer class="site-footer">
+    <span>Desenvolvimento Web · Lista 13</span>
+    <span>C# + Blazor · .NET 10</span>
+</footer>
+
+<div id="blazor-error-ui" data-nosnippet>
+    Ocorreu um erro na aplicação.
+    <a href="." class="reload">Recarregar página</a>
+    <button type="button" class="dismiss" aria-label="Fechar aviso">×</button>
+</div>
